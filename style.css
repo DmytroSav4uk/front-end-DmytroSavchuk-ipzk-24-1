@@ -1,0 +1,150 @@
+/*task1*/
+
+h1{
+    text-align: center;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.task1 input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.task1 div div {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+.task1 input:checked ~ .tab_content {
+    max-height: 20rem;
+}
+
+section:fi {
+    color: black;
+    background: aliceblue;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+label{
+    display: flex;
+    color: #000000;
+    background: antiquewhite;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+.task1 input:checked + label::after {
+    transform: rotate(270deg);
+}
+.task1 div div p {
+    margin: 0;
+    padding: 1rem;
+}
+
+
+/*task2*/
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input{
+    width: 50%;
+    margin: 10px;
+    height: 40px;
+    font-size: 26px;
+    transition: ease-in-out 0.2s;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+form input:focus{
+    border-radius: 10px;
+    outline: none;
+    /*scale: 110%;*/
+}
+
+form button{
+    width: 50%;
+    height: 100px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: ease-in-out 0.2s;
+}
+
+form button:hover{
+    background: black;
+    color: white;
+}
+
+form input:invalid + button {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+form input:valid + span{
+    display: none;
+}
+
+form input:invalid + span{
+    color: red;
+    display: block;
+}
+
+form input:invalid{
+    color: red;
+    background: rgba(108, 108, 151, 0.35);
+}
+
+
+/*task3*/
+
+
+.task3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task3 div{
+    background: darkslategrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.task3 div div{
+    background: gray;
+}
+
+.task3 div div div{
+    background: #cacaca;
+}
+
+.task3 p {
+    padding: 10px;
+    background: antiquewhite;
+}
