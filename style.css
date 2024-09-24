@@ -3,52 +3,20 @@
     font-size: 20px;
 }
 
-
-#task1 {
-    border: 2px solid black;
+.accordion {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
-
-hr {
-    border: 1px solid black;
+.accordion-header {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-
-.selected {
-    background: yellow;
-}
-
-.table {
-    margin-bottom: 20px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 50%;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    width: 100px;
-    height: 50px;
-    text-align: center;
-}
-
-.matrixes{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.matrix{
-    width: 100%;
-}
-
-h1{
-    text-align: center;
-}
-
-#trans-matrix table, #matrix-table table{
-    width: 100%;
+.accordion-content {
+    display: none; /* Сховати контент за замовчуванням */
+    padding: 10px;
+    border-top: 1px solid #ccc;
 }
