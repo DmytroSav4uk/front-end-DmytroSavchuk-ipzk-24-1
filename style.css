@@ -1,150 +1,259 @@
-/*task1*/
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+#navbar a:hover {
+    background-color: #575757;
+}
+
+
+.content {
+    margin-top: 50px;
+    padding: 20px;
+}
 
 h1{
     text-align: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 10px;
 }
 
-.task1 input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-.task1 div div {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.35s;
-}
-.task1 input:checked ~ .tab_content {
-    max-height: 20rem;
-}
-
-section:fi {
-    color: black;
-    background: aliceblue;
-    border: 2px solid;
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-label{
-    display: flex;
-    color: #000000;
-    background: antiquewhite;
+.image {
     cursor: pointer;
-    justify-content: space-between;
-    padding: 1rem;
-
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
-label::after {
-    content: "\276F";
-    width: 1em;
-    height: 1em;
-    text-align: center;
-    transform: rotate(90deg);
-    transition: all 0.35s;
-}
-.task1 input:checked + label::after {
-    transform: rotate(270deg);
-}
-.task1 div div p {
-    margin: 0;
-    padding: 1rem;
+.inactive{
+    filter: grayscale(100%);
+    opacity: 0.5;
 }
 
 
-/*task2*/
+.task6Form{
+ border: 1px solid black;
+}
 
+.task6Form div{
+    border: 1px solid black;
+    padding: 10px;
+}
 
-form{
+.input-wrapper:focus-within {
+    background-color: cornflowerblue;
+}
+
+.resizable-box {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    transition: transform 0.3s, width 0.3s, height 0.3s;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    font-size: 0.9em!important;
+    font-family: sans-serif!important;
+    min-width: 400px!important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)!important;
+    width: 100%;
+}
+
+.tableFather{
+    width: 40%;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+thead tr {
+    background-color: #333!important;
+    color: #ffffff!important;
+    text-align: left!important;
+    border-radius: 50px !important;
+}
+
+thead{
+
+}
+
+td, th {
+    padding: 12px 15px!important;
+
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd!important;
+
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3!important;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879!important;
+}
+
+.owl-carousel {
+    max-width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.owl-carousel .item img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+
+}
+
+
+.owl-prev, .owl-next {
+    background-color: #4a90e2!important;
+    color: white !important;
+    width: 20px!important;
+    height: 20px!important;
+    border: none;
+    border-radius: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form input{
-    width: 50%;
-    margin: 10px;
-    height: 40px;
-    font-size: 26px;
-    transition: ease-in-out 0.2s;
-    border: 1px solid black;
-    padding: 10px;
+.owl-prev span, .owl-next span{
+    height: 143%;
+}
+
+.owl-prev {
+    left: 10px;
+}
+
+.owl-next {
+    right: 10px;
 }
 
 
-form input:focus{
-    border-radius: 10px;
-    outline: none;
-    /*scale: 110%;*/
+.owl-prev:hover, .owl-next:hover {
+    background-color: #357ab8!important;
 }
 
-form button{
-    width: 50%;
-    height: 100px;
-    background: none;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bolder;
-    transition: ease-in-out 0.2s;
+
+@media (max-width: 600px) {
+    .owl-prev, .owl-next {
+        padding: 8px 12px;
+    }
 }
 
-form button:hover{
-    background: black;
-    color: white;
+* {
+    box-sizing: border-box;
 }
 
-form input:invalid + button {
+
+
+.slider-wrapper {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides-container {
+    height: calc(100vh - 2rem);
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-arrow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 4rem;
+    background-color: white;
+    border: none;
+    width: 2rem;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
     opacity: 0.5;
-    pointer-events: none;
+    transition: opacity 100ms;
 }
 
-form input:valid + span{
-    display: none;
+.slide-arrow:hover,
+.slide-arrow:focus {
+    opacity: 1;
 }
 
-form input:invalid + span{
-    color: red;
-    display: block;
+#slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
 }
 
-form input:invalid{
-    color: red;
-    background: rgba(108, 108, 151, 0.35);
+#slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
 }
 
-
-/*task3*/
-
-
-.task3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.slide {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
 }
 
-.task3 div{
-    background: darkslategrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+.slide:nth-child(1) {
+    background-color: #49b293;
 }
 
-.task3 div div{
-    background: gray;
+.slide:nth-child(2) {
+    background-color: #b03532;
 }
 
-.task3 div div div{
-    background: #cacaca;
+.slide:nth-child(3) {
+    background-color: #6a478f;
+    margin: 0;
 }
 
-.task3 p {
-    padding: 10px;
-    background: antiquewhite;
+.slide:nth-child(4) {
+    background-color: #da6f2b;
 }
