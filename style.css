@@ -26,7 +26,7 @@
     padding: 20px;
 }
 
-h1{
+h1 {
     text-align: center;
     border-bottom: 1px solid black;
     padding: 10px;
@@ -47,17 +47,17 @@ h1{
     transition: opacity 0.3s ease;
 }
 
-.inactive{
+.inactive {
     filter: grayscale(100%);
     opacity: 0.5;
 }
 
 
-.task6Form{
- border: 1px solid black;
+.task6Form {
+    border: 1px solid black;
 }
 
-.task6Form div{
+.task6Form div {
     border: 1px solid black;
     padding: 10px;
 }
@@ -78,14 +78,14 @@ h1{
 }
 
 table {
-    font-size: 0.9em!important;
-    font-family: sans-serif!important;
-    min-width: 400px!important;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)!important;
+    font-size: 0.9em !important;
+    font-family: sans-serif !important;
+    min-width: 400px !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) !important;
     width: 100%;
 }
 
-.tableFather{
+.tableFather {
     width: 40%;
     overflow: hidden;
     border-top-left-radius: 10px;
@@ -93,32 +93,32 @@ table {
 }
 
 thead tr {
-    background-color: #333!important;
-    color: #ffffff!important;
-    text-align: left!important;
+    background-color: #333 !important;
+    color: #ffffff !important;
+    text-align: left !important;
     border-radius: 50px !important;
 }
 
-thead{
+thead {
 
 }
 
 td, th {
-    padding: 12px 15px!important;
+    padding: 12px 15px !important;
 
 }
 
 tbody tr {
-    border-bottom: 1px solid #dddddd!important;
+    border-bottom: 1px solid #dddddd !important;
 
 }
 
 tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3!important;
+    background-color: #f3f3f3 !important;
 }
 
 tbody tr:last-of-type {
-    border-bottom: 2px solid #009879!important;
+    border-bottom: 2px solid #009879 !important;
 }
 
 .owl-carousel {
@@ -136,10 +136,10 @@ tbody tr:last-of-type {
 
 
 .owl-prev, .owl-next {
-    background-color: #4a90e2!important;
+    background-color: #4a90e2 !important;
     color: white !important;
-    width: 20px!important;
-    height: 20px!important;
+    width: 20px !important;
+    height: 20px !important;
     border: none;
     border-radius: 100%;
     padding: 10px 15px;
@@ -154,7 +154,7 @@ tbody tr:last-of-type {
     justify-content: center;
 }
 
-.owl-prev span, .owl-next span{
+.owl-prev span, .owl-next span {
     height: 143%;
 }
 
@@ -168,7 +168,7 @@ tbody tr:last-of-type {
 
 
 .owl-prev:hover, .owl-next:hover {
-    background-color: #357ab8!important;
+    background-color: #357ab8 !important;
 }
 
 
@@ -181,7 +181,6 @@ tbody tr:last-of-type {
 * {
     box-sizing: border-box;
 }
-
 
 
 .slider-wrapper {
@@ -256,4 +255,27 @@ tbody tr:last-of-type {
 
 .slide:nth-child(4) {
     background-color: #da6f2b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+input {
+    margin: 5px!important;
+    width: 50% !important;
+}
+
+
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+    border: 1px solid black;
 }
