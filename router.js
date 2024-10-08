@@ -224,7 +224,7 @@ function task3(){
     });
 
     document.getElementById('answers').addEventListener('change', function() {
-        document.getElementById('nextTask').disabled = false; // активуємо кнопку
+        document.getElementById('nextTask').disabled = false;
     });
 
     generateTask();
