@@ -151,7 +151,6 @@ function task2() {
     const binaryInput = document.getElementById('binaryInput');
     const gridTable = document.getElementById('gridTable');
 
-    // Додати слухача на подію input
     binaryInput.addEventListener('input', generateGrid);
 
     function generateGrid() {
