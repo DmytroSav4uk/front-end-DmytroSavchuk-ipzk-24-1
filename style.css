@@ -265,10 +265,9 @@ form {
 }
 
 input {
-    margin: 5px!important;
+    margin: 5px !important;
     width: 50% !important;
 }
-
 
 
 .black {
@@ -278,4 +277,160 @@ input {
 .white {
     background-color: white;
     border: 1px solid black;
+}
+
+
+.palette {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: ease-in-out 0.1s;
+}
+
+.color-box.selected {
+    border: 2px solid black;
+    scale: 105%;
+}
+
+#rectangle {
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    transition: background-color 0.2s;
+}
+
+.block {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.block-buttons {
+    margin-top: 10px;
+}
+
+.block textarea {
+    width: 100%;
+    height: 300px;
+}
+
+.canvas {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-gap: 5px;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+
+.card-container {
+    display: flex;
+    gap: 120px;
+    margin: 100px 100px 100px 100px;
+}
+
+.card {
+    cursor: pointer;
+    height: 100px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card-inner img {
+    width: 100px;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+
+.card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.with-css {
+    display: flex;
+}
+
+.css {
+    overflow-y: auto;
+    height: 300px;
+}
+
+.message {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.message p {
+    margin: 10px;
+}
+
+.sender {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+
+.book-list {
+    list-style-type: none;
+    padding: 0;
+}
+.book-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.book-item:hover {
+    background-color: #f0f0f0;
+}
+.active {
+    background-color: green;
+    color: white;
+}
+
+.active:hover{
+    background-color: green;
 }
