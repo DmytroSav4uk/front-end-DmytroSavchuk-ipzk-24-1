@@ -4,12 +4,10 @@ class Router {
         this.routes = {};
         this.currentRoute = '';
 
-        // Слушаем изменения в URL
         window.addEventListener('hashchange', () => {
             this.handleRoute(window.location.hash.slice(1));
         });
 
-        // Обрабатываем маршрут при первой загрузке страницы
         this.handleRoute(window.location.hash.slice(1) || '/');
     }
 
@@ -18,7 +16,7 @@ class Router {
     }
 
     navigate(path) {
-        window.location.hash = path; // Изменяем хеш в URL
+        window.location.hash = path;
         this.handleRoute(path);
     }
 
