@@ -200,7 +200,7 @@ function task3(){
             const wrongAnswer = Math.floor(Math.random() * 100);
             answers.add(wrongAnswer);
         }
-        return Array.from(answers).sort(() => Math.random() - 0.5); // перемішуємо
+        return Array.from(answers).sort(() => Math.random() - 0.5);
     }
 
     document.getElementById('nextTask').addEventListener('click', function() {
