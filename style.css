@@ -600,10 +600,8 @@ ul {
     margin-right: 10px;
 }
 
-.container {
+.containerBlock {
     position: relative;
-    width: 100vw;
-    height: 100vh;
 }
 
 .block {

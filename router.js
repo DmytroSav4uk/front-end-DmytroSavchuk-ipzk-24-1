@@ -258,7 +258,7 @@ let task4Params = {
     taskDescription: 'Реалізуйте автоматичне переміщення декількох блоків по екрану. Блоки повинні починати рухатися у випадкових напрямках. Досягаючи границь вікна браузера блоки повинні починати рух у зворотному напрямку.\n',
     htmlMarkUp: `
 
-<div class="container">
+<div id="containerBlock" class="containerBlock">
     <div class="block" style="background-color: #ff5733;"></div>
     <div class="block" style="background-color: #33c1ff;"></div>
     <div class="block" style="background-color: #75ff33;"></div>
@@ -269,26 +269,26 @@ let task4Params = {
 };
 addRoute('task4', task4Params)
 function task4() {
-// Отримуємо всі блоки та запускаємо анімацію для кожного з них.
-    document.querySelectorAll('.block').forEach(block => {
-        let x = Math.random() * (window.innerWidth - 50); // Випадкова початкова позиція (X)
-        let y = Math.random() * (window.innerHeight - 50); // Випадкова початкова позиція (Y)
-        let dx = (Math.random() < 0.5 ? -1 : 1) * (2 + Math.random() * 3); // Швидкість та напрямок по X
-        let dy = (Math.random() < 0.5 ? -1 : 1) * (2 + Math.random() * 3); // Швидкість та напрямок по Y
 
-        // Встановлюємо початкову позицію блока.
+    let container = document.getElementById('containerBlock')
+
+    document.querySelectorAll('.block').forEach(block => {
+        let x = Math.random() * (window.innerWidth - 50);
+        let y = Math.random() * (window.innerHeight - 50);
+        let dx = (Math.random() < 0.5 ? -1 : 1) * (2 + Math.random() * 3);
+        let dy = (Math.random() < 0.5 ? -1 : 1) * (2 + Math.random() * 3);
+
         block.style.transform = `translate(${x}px, ${y}px)`;
 
         function moveBlock() {
-            // Оновлюємо координати.
             x += dx;
             y += dy;
 
             if (x <= 0 || x >= window.innerWidth - 50) {
-                dx = -dx; // Змінюємо напрямок по X.
+                dx = -dx;
             }
             if (y <= 0 || y >= window.innerHeight - 50) {
-                dy = -dy; // Змінюємо напрямок по Y.
+                dy = -dy;
             }
 
             block.style.transform = `translate(${x}px, ${y}px)`;
@@ -299,7 +299,6 @@ function task4() {
     });
 
 }
-
 
 
 //code highlights
